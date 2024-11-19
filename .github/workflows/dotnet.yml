@@ -21,8 +21,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./Testing/Testing.sln
     - name: Build
-      run: dotnet build --no-restore ../../Testing/Testing.sln
+      run: dotnet build --no-restore ./Testing/Testing.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal ../../Testing/Testing.sln
+      run: dotnet test --no-build --verbosity normal ./Testing/Testing.sln
