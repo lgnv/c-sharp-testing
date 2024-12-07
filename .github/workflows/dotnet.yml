@@ -26,5 +26,6 @@ jobs:
       run: dotnet build --no-restore ./Testing/Testing.sln
     - name: Test
       run: dotnet test --no-build --verbosity normal ./Testing/Testing.sln
-    - name: foo
-      run: echo Hello
+    - name: Dotnet Test Reporter
+      uses: bibipkins/dotnet-test-reporter@v1.4.1
+            
